@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificate - Muhammad Qaishar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animasi Fade-in */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="bg-black text-white font-sans">
 
+  <!-- LOADING SCREEN -->
+  <div id="loading" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+  </div>
+
   <!-- NAVBAR -->
-  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-50">
+  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-40 fade-in">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       
       <!-- Logo -->
@@ -26,7 +43,7 @@
   </nav>
 
   <!-- CONTENT -->
-  <section class="max-w-5xl mx-auto px-6 py-12">
+  <section class="max-w-5xl mx-auto px-6 py-12 fade-in">
     <!-- Heading -->
     <div class="text-center mb-10">
       <h1 class="text-3xl md:text-4xl font-bold mb-3">My Certificates</h1>
@@ -34,7 +51,7 @@
     </div>
 
     <!-- Certificate Card -->
-    <div class="bg-neutral-900 p-6 rounded-2xl shadow-lg">
+    <div class="bg-neutral-900 p-6 rounded-2xl shadow-lg mb-8 transform transition duration-500 hover:scale-105 hover:shadow-xl">
       <img src="sanber.png" alt="Certificate Sanber" 
            class="mx-auto rounded-lg shadow-lg max-w-full">
       <div class="mt-4 text-center">
@@ -43,8 +60,8 @@
       </div>
     </div>
 
-    <div class="bg-neutral-900 p-6 rounded-2xl shadow-lg">
-      <img src="myskill.png" alt="Certificate Sanber" 
+    <div class="bg-neutral-900 p-6 rounded-2xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl">
+      <img src="myskill.png" alt="Certificate MySkill" 
            class="mx-auto rounded-lg shadow-lg max-w-full">
       <div class="mt-4 text-center">
         <h2 class="text-xl font-semibold">MySkill Certificate</h2>
@@ -53,12 +70,21 @@
     </div>
   </section>
 
-
-
   <!-- FOOTER -->
-  <footer class="bg-neutral-900 text-gray-400 text-center py-4 mt-10">
+  <footer class="bg-neutral-900 text-gray-400 text-center py-4 mt-10 fade-in">
     <p>© 2025 Muhammad Qaishar - Portfolio</p>
   </footer>
+
+  <!-- SCRIPT LOADING -->
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading");
+      loader.style.display = "none";
+      document.querySelectorAll(".fade-in").forEach(el => {
+        el.style.opacity = "1";
+      });
+    });
+  </script>
 
 </body>
 </html>

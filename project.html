@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Qaishar - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animasi Fade-in */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="bg-black text-white font-sans">
 
+  <!-- LOADING SCREEN -->
+  <div id="loading" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+  </div>
+
   <!-- NAVBAR -->
-  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-50">
+  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-40 fade-in">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       
       <!-- Logo -->
@@ -26,22 +43,25 @@
   </nav>
 
   <!-- PROJECTS SECTION -->
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-12">My Featured Projects</h2>
+  <section class="max-w-6xl mx-auto px-6 py-16 fade-in">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">My Projects</h1>
+      <p class="text-gray-400">Here are some of my projects</p>
+    </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       
       <!-- Project 1 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
         <img src="laundry.png" alt="Project Laundry" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Laundry Web App</h3>
+          <h3 class="text-xl font-semibold mb-2">Laundry Web</h3>
           <p class="text-gray-400 text-sm">Sebuah aplikasi laundry dengan fitur CRUD, login multi-user (Admin, Karyawan, Siswa) menggunakan Laravel.</p>
         </div>
       </div>
 
       <!-- Project 2 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
         <img src="plannest.png" alt="Project Plannest" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">Plannest Schedule</h3>
@@ -49,29 +69,43 @@
         </div>
       </div>
 
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
-        <img src="skentot.png" alt="Project Plannest" class="w-full h-64 object-cover">
+      <!-- Project 3 -->
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
+        <img src="skentot.png" alt="Store Web" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Store Web</h3>
+          <h3 class="text-xl font-semibold mb-2">StoreApp</h3>
           <p class="text-gray-400 text-sm">Website toko online sederhana yang menggunakan API dan mendukung pengelolaan produk, transaksi, serta sistem manajemen inventori berbasis web.</p>
         </div>
       </div>
 
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
-        <img src="news.png" alt="Project Plannest" class="w-full h-64 object-cover">
+      <!-- Project 4 -->
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
+        <img src="news.png" alt="Store Web" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Plannest Schedule</h3>
+          <h3 class="text-xl font-semibold mb-2">NewsApp</h3>
           <p class="text-gray-400 text-sm">Aplikasi berita berbasis Flutter yang menggunakan API. Memberikan informasi terkini secara cepat, mudah, dan praktis melalui perangkat mobile.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-neutral-900 text-gray-400 text-center py-6 mt-12">
+  <footer class="bg-neutral-900 text-gray-400 text-center py-6 mt-12 fade-in">
     <p>&copy; 2025 Muhammad Qaishar - Projects</p>
   </footer>
+
+  <!-- SCRIPT LOADING -->
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading");
+      loader.style.display = "none";
+      document.querySelectorAll(".fade-in").forEach((el, i) => {
+        setTimeout(() => {
+          el.style.opacity = "1";
+        }, i * 200); // delay animasi biar muncul satu-satu
+      });
+    });
+  </script>
 
 </body>
 </html>
