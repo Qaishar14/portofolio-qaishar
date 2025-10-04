@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Qaishar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-xl">Portofolio</span>
+      </div>
+
+      <!-- Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium text-gray-300">
+        <li><a href="#" class="hover:text-white transition">Home</a></li>
+        <li><a href="#experience" class="hover:text-white transition">Experience</a></li>
+        <li><a href="certificate.html" class="hover:text-white transition">Certificate</a></li>
+        <li><a href="project.html" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Container -->
+  <div id="home" class="max-w-5xl mx-auto p-6 space-y-8">
+
+    <!-- Header -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+      <div class="flex justify-center">
+        <img src="aboutme2.JPG" alt="Profile" class="rounded-2xl shadow-lg">
+      </div>
+      <div class="md:col-span-2 space-y-4">
+        <p class="text-lg">
+          My name is <span class="font-semibold">Muhammad Qaishar</span>, a student & web developer with experience creating modern, clean, and minimal projects that make a lasting impression.
+        </p>
+        <div class="mb-6">
+          <p class="text-lg font-semibold mb-3">Interests :</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-neutral-800 rounded-full text-sm hover:bg-neutral-700 transition">
+              🖥️ Coding
+            </span>
+            <span class="px-4 py-2 bg-neutral-800 rounded-full text-sm hover:bg-neutral-700 transition">
+              💪 Exercise
+            </span>
+            <span class="px-4 py-2 bg-neutral-800 rounded-full text-sm hover:bg-neutral-700 transition">
+              📸 Modeling
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div id="experience" class="grid md:grid-cols-2 gap-6">
+      <div class="bg-neutral-900 p-5 rounded-xl space-y-3 shadow">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-xl">Student</h2>
+          <span class="text-sm text-gray-400">Vocational School</span>
+        </div>
+        <p class="text-gray-400 text-sm">Web Development Projects</p>
+        <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+          <li>Laundry Web - HTML</li>
+          <li>Store Web - Flutter</li>
+          <li>ToDo List Web - Laravel</li>
+          <li>News Web - Flutter</li>
+        </ul>
+      </div>
+
+      <div class="bg-neutral-900 p-5 rounded-xl space-y-3 shadow">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-xl">Framework</h2>
+          <span class="text-sm text-gray-400">2024 - Now</span>
+        </div>
+        <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+          <li>Flutter</li>
+          <li>Laravel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills & Education -->
+    <div id="skills" class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-4">
+        <div class="bg-neutral-900 p-5 rounded-xl shadow">
+          <h3 class="font-bold mb-2">Programming Skills</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-800 rounded-lg">HTML</span>
+            <span class="px-3 py-1 bg-gray-800 rounded-lg">CSS</span>
+            <span class="px-3 py-1 bg-gray-800 rounded-lg">JavaScript</span>
+            <span class="px-3 py-1 bg-gray-800 rounded-lg">PHP</span>
+            <span class="px-3 py-1 bg-gray-800 rounded-lg">Dart</span>
+          </div>
+        </div>
+        <div class="bg-neutral-900 p-5 rounded-xl shadow">
+          <h3 class="font-bold mb-2">Languages</h3>
+          <div class="flex space-x-3">
+            <span>🇮🇩 Indonesia</span>
+            <span>🇺🇸 English</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-neutral-900 p-5 rounded-xl shadow">
+          <h3 class="font-bold">Junior School</h3>
+          <p class="text-gray-400 text-sm">2020 - SD Islam Al-Fajar</p>
+        </div>
+        <div class="bg-neutral-900 p-5 rounded-xl shadow">
+          <h3 class="font-bold">Junior High School</h3>
+          <p class="text-gray-400 text-sm">2024 - MTSN 31 East Jakarta</p>
+        </div>
+        <div class="bg-neutral-900 p-5 rounded-xl shadow">
+          <h3 class="font-bold">Vocational School</h3>
+          <p class="text-gray-400 text-sm">2027 - SMK IT As-Syifa</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="bg-neutral-900 p-5 rounded-xl shadow">
+  <h3 class="font-bold mb-3">Portfolio</h3>
+  <div class="flex flex-wrap gap-4">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/qa_is_har" target="_blank" class="flex items-center space-x-2 px-3 py-2 bg-gray-800 rounded-lg hover:bg-pink-600 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-6 h-6">
+      <span>Instagram</span>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/Qaishar14" target="_blank" class="flex items-center space-x-2 px-3 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6">
+      <span>GitHub</span>
+    </a>
+
+  </div>
+</div>
+
+    <!-- Footer -->
+    <div id="contact" class="bg-neutral-900 p-5 rounded-xl flex flex-wrap justify-between items-center shadow">
+      <span>👨 16 years</span>
+      <span>✉️ mqaishar20@gmail.com</span>
+      <span>📞 +62 856 9207 5520</span>
+      <span>🇮🇩 Indonesia</span>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

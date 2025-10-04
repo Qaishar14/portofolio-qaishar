@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Qaishar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-xl tracking-wide">Projects</span>
+      </div>
+
+      <!-- Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium text-gray-300">
+        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+        <li><a href="certificate.html" class="hover:text-white transition">Certificate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PROJECTS SECTION -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">My Featured Projects</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Project 1 -->
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="laundry.png" alt="Project Laundry" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Laundry Web App</h3>
+          <p class="text-gray-400 text-sm">Sebuah aplikasi laundry dengan fitur CRUD, login multi-user (Admin, Karyawan, Siswa) menggunakan Laravel.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="plannest.png" alt="Project Plannest" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Plannest Schedule</h3>
+          <p class="text-gray-400 text-sm">Aplikasi pengelolaan jadwal modern dengan fitur reminder, filter, dan tampilan UI/UX yang menarik.</p>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="skentot.png" alt="Project Plannest" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Store Web</h3>
+          <p class="text-gray-400 text-sm">Website toko online sederhana yang menggunakan API dan mendukung pengelolaan produk, transaksi, serta sistem manajemen inventori berbasis web.</p>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="news.png" alt="Project Plannest" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Plannest Schedule</h3>
+          <p class="text-gray-400 text-sm">Aplikasi berita berbasis Flutter yang menggunakan API. Memberikan informasi terkini secara cepat, mudah, dan praktis melalui perangkat mobile.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-neutral-900 text-gray-400 text-center py-6 mt-12">
+    <p>&copy; 2025 Muhammad Qaishar - Projects</p>
+  </footer>
+
+</body>
+</html>
