@@ -6,35 +6,58 @@
   <title>Muhammad Qaishar - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Animasi Fade-in */
-    .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
+    /* Fade + Slide Animation */
+    .fade-in-up {
       opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
     }
-    @keyframes fadeIn {
+    @keyframes fadeUp {
       to {
         opacity: 1;
+        transform: translateY(0);
       }
+    }
+
+    /* Glow effect */
+    .card-glow:hover {
+      box-shadow: 0 0 25px rgba(0, 136, 255, 0.3);
+    }
+
+    /* Image hover effect */
+    .project-img {
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    .project-img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.15);
+    }
+
+    /* Parallax background (subtle) */
+    .parallax {
+      background: linear-gradient(180deg, #000000 0%, #0d0d0d 100%);
+      background-attachment: fixed;
+    }
+
+    /* Loader animation */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
+
 <body class="bg-black text-white font-sans">
 
   <!-- LOADING SCREEN -->
   <div id="loading" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-    <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+    <div class="w-16 h-16 border-4 border-gray-800 border-t-blue-500 rounded-full" style="animation: spin 1s linear infinite;"></div>
   </div>
 
   <!-- NAVBAR -->
-  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-40 fade-in">
+  <nav class="bg-neutral-900 shadow-lg sticky top-0 z-40 fade-in-up">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <span class="font-bold text-xl tracking-wide">Projects</span>
-      </div>
-
-      <!-- Menu -->
+      <span class="font-bold text-xl tracking-wide text-blue-400">Projects</span>
       <ul class="hidden md:flex space-x-6 font-medium text-gray-300">
         <li><a href="index.html" class="hover:text-white transition">Home</a></li>
         <li><a href="certificate.html" class="hover:text-white transition">Certificate</a></li>
@@ -43,82 +66,82 @@
   </nav>
 
   <!-- PROJECTS SECTION -->
-  <section class="max-w-6xl mx-auto px-6 py-16 fade-in">
-    <div class="text-center mb-10">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">My Projects</h1>
-      <p class="text-gray-400">Here are some of my projects</p>
+  <section class="max-w-6xl mx-auto px-6 py-20 parallax">
+    <div class="text-center mb-12 fade-in-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">My Projects</h1>
+      <p class="text-gray-400 text-sm md:text-base">Here are some of my works and applications I've built</p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       
-      <!-- Project 1 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
-        <img src="laundry.png" alt="Project Laundry" class="w-full h-64 object-cover">
+      <!-- Project Card Template -->
+      <div class="bg-neutral-900 rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 card-glow fade-in-up">
+        <img src="laundry.png" alt="Laundry Web" class="w-full h-64 object-cover project-img">
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Laundry Web</h3>
-          <p class="text-gray-400 text-sm">Sebuah aplikasi laundry dengan fitur CRUD, login multi-user (Admin, Karyawan, Siswa) menggunakan Laravel.</p>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
-        <img src="plannest.png" alt="Project Plannest" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Plannest Schedule</h3>
-          <p class="text-gray-400 text-sm">Aplikasi pengelolaan jadwal modern dengan fitur reminder, filter, dan tampilan UI/UX yang menarik.</p>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
-        <img src="skentot.png" alt="Skentot" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">StoreApp</h3>
-          <p class="text-gray-400 text-sm">Website toko online sederhana yang menggunakan API dan mendukung pengelolaan produk, transaksi, serta sistem manajemen inventori berbasis web.</p>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
-        <img src="news.png" alt="NewsApp" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">NewsApp</h3>
-          <p class="text-gray-400 text-sm">Aplikasi berita berbasis Flutter yang menggunakan API. Memberikan informasi terkini secara cepat, mudah, dan praktis melalui perangkat mobile.</p>
-        </div>
-      </div>
-
-        <!-- Project 5 -->
-      <div class="bg-neutral-900 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl">
-        <img src="MockUp Cook-Kie.png" alt="Cook-Kie" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Cook-Kie</h3>
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">Laundry Web</h3>
           <p class="text-gray-400 text-sm">
-            Cook-Kie! adalah aplikasi resep masakan berbasis Flutter yang menggunakan API untuk memudahkan pengguna mencari, membaca, dan menyimpan resep dari berbagai negara.
-            Aplikasi ini menampilkan informasi lengkap seperti bahan, langkah memasak, serta gambar hidangan.
-            Dengan desain modern, warna oranye hangat, dan navigasi sederhana, Cook-Kie! membuat pengalaman memasak jadi lebih menyenangkan dan praktis.
+            Aplikasi laundry dengan fitur CRUD, login multi-user (Admin, Karyawan, Siswa) menggunakan Laravel.
           </p>
         </div>
       </div>
+
+      <div class="bg-neutral-900 rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 card-glow fade-in-up">
+        <img src="plannest.png" alt="Plannest" class="w-full h-64 object-cover project-img">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">Plannest Schedule</h3>
+          <p class="text-gray-400 text-sm">
+            Aplikasi pengelolaan jadwal modern dengan fitur reminder, filter, dan tampilan UI/UX yang menarik.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 card-glow fade-in-up">
+        <img src="skentot.png" alt="StoreApp" class="w-full h-64 object-cover project-img">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">StoreApp</h3>
+          <p class="text-gray-400 text-sm">
+            Website toko online sederhana yang menggunakan API dan mendukung pengelolaan produk, transaksi, serta sistem manajemen inventori berbasis web.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 card-glow fade-in-up">
+        <img src="news.png" alt="NewsApp" class="w-full h-64 object-cover project-img">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">NewsApp</h3>
+          <p class="text-gray-400 text-sm">
+            Aplikasi berita berbasis Flutter yang menggunakan API. Memberikan informasi terkini secara cepat, mudah, dan praktis melalui perangkat mobile.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-neutral-900 rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 card-glow fade-in-up">
+        <img src="MockUp Cook-Kie.png" alt="Cook-Kie" class="w-full h-64 object-cover project-img">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-400">Cook-Kie</h3>
+          <p class="text-gray-400 text-sm">
+            Cook-Kie! adalah aplikasi resep masakan berbasis Flutter yang menggunakan API untuk memudahkan pengguna mencari, membaca, dan menyimpan resep dari berbagai negara.
+            Aplikasi ini menampilkan bahan, langkah memasak, dan gambar hidangan.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-neutral-900 text-gray-400 text-center py-6 mt-12 fade-in">
+  <footer class="bg-neutral-900 text-gray-400 text-center py-6 mt-12 fade-in-up">
     <p>&copy; 2025 Muhammad Qaishar - Projects</p>
   </footer>
 
-  <!-- SCRIPT LOADING -->
+  <!-- SCRIPT -->
   <script>
     window.addEventListener("load", () => {
-      const loader = document.getElementById("loading");
-      loader.style.display = "none";
-      document.querySelectorAll(".fade-in").forEach((el, i) => {
-        setTimeout(() => {
-          el.style.opacity = "1";
-        }, i * 200); // delay animasi biar muncul satu-satu
+      document.getElementById("loading").style.display = "none";
+      document.querySelectorAll(".fade-in-up").forEach((el, i) => {
+        setTimeout(() => el.style.animationDelay = `${i * 0.1}s`, 100);
       });
     });
   </script>
-
 </body>
 </html>
